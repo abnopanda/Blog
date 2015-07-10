@@ -28,24 +28,20 @@
 </head>
 <body class="{{body_class}}">
     <div id="fb-root"></div>
+    <!--
     <aside class="subscribe-banner">
-        Want to keep up to date weekly with more great posts? &nbsp;<a class="button" data-toggle="modal" data-target="#blogsubscribe">Subscribe</a>
+        Want to keep up to date {{@blog.url}} weekly with more great posts? &nbsp;<a class="button" data-toggle="modal" data-target="#blogsubscribe">Subscribe</a>
     </aside>
-    <header id="global-header" class="global-header navbar">
+    -->
+    <header id="global-header" class="global-header navbar no-print">
        <nav role="navigation">
            <div class="wrapper">
-               <a class="ghost-logo" href="https://ghost.org/"><span>Ghost</span></a>
+               <a class="ghost-logo" href="{{@blog.url}}"><span>Ghost</span></a>
                <button type="button" class="mobile-menu" data-toggle="closed" data-target=".nav-collapse">
                <span class="hidden">Menu</span>
                </button>
                <ul id="main-menu" class="nav-collapse closed">
-                   <li><a href="//ghost.org/features/">Features</a></li>
-                   <li><a href="//ghost.org/about/">About</a></li>
-                   <li><a href="//marketplace.ghost.org">Marketplace</a></li>
-                   <li><a href="//ghost.org/forum/">Forum</a></li>
-                   <li class="current extra"><a href="//blog.ghost.org">Blog</a></li>
-                   <li><a class="signup" href="//ghost.org/signup/">Sign Up</a></li>
-                   <li><a class="login" href="//ghost.org/login/">Log in</a></li>
+                   <li><a class="login" href="{{@blog.url}}/login/">Log in</a></li>
                </ul>
            </div>
         </nav>
@@ -57,7 +53,7 @@
             <div class="clearfix"></div>
         </div>
     </main>
-
+<!--
     <div class="modal fade" id="blogsubscribe" tabindex="-1" role="dialog" aria-labelledby="Email subscription modal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -75,10 +71,11 @@
             </div>
         </div>
     </div>
-
+-->
     <div class="clearfix"></div>
 
     <footer id="global-footer">
+<!--
         <nav id="footer-nav" role="navigation">
             <ul id="footer-menu">
                 <li class="logo"><a href="/"><img alt="Ghost" src="//ghost.org/assets/logo-minighost-0f5476cf6a52adff2f2a67e4f16d3e29.png"></a></li>
@@ -103,6 +100,7 @@
 
         </nav>
         <div class="clearfix"></div>
+        -->
     </footer>
 
     {{ghost_foot}}
@@ -115,7 +113,6 @@
             });
         }
     </script>
-    <script src="https://ghost.org/navigation/"></script>
 
     <script type="text/javascript" src="//ghost.org/assets/application-b3c32be93105ff710a7fd776dff06d70.js"></script>
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
